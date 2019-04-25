@@ -16,8 +16,10 @@ def dictionary
     }
 end
 
+fullword = fullword.downcase to collectively incorporate the .downcase mthod instead of individually adding it.
+
 def word_substituter(tweet)
-  tweet.split.collect do |full_word|
+  tweet.split.collect do |full_word| #var used to refer to each element -- dont call anything on it.
       if dictionary[full_word.downcase] #checking to see if full_word is inside hash
          dictionary[full_word.downcase] #if it is, it will return it's value (strings will alwys be truthy values) #bc its not in the hash, no key for value and will be falsey which doesnt exist so it will move on the else
       else
