@@ -17,6 +17,7 @@ def dictionary
 end
 
 def word_substituter(tweet)
+  binding.pry
   tweet.split.collect do |full_word|
       if dictionary[full_word] #checking to see if full_word is inside hash
          dictionary[full_word] #if it is, it will return it's value (strings will alwys be truthy values) #bc its not in the hash, no key for value and will be falsey which doesnt exist so it will move on the else
